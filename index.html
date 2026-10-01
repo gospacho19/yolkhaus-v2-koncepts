@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Yolkhaüs — brokastis visu dienu, Dzirnavu iela 42, Rīga</title>
+<meta name="description" content="Dizaina priekšlikums (koncepts) Yolkhaüs — brokastis visu dienu Dzirnavu ielā 42, Rīgā. Nav oficiālā lapa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f1ece4; --cloth:#faf8f4; --sand:#e6dfd3;
+  --ink:#1e1c1a; --ink2:#4a4641; --mute:#7f786e; --line:#d9d1c4;
+  --red:#d93a29; --red-deep:#b92d1f;
+  --floor:#34465c; --floor-deep:#27364a; --on-floor:#eef0f1; --on-floor-mute:#a9b7c6;
+  --open:#4f8a5b;
+  --f:"Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --g:20px; --max:1240px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.55;font-optical-sizing:auto;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+[data-lang][hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+
+/* concept notice */
+.notice{background:var(--ink);color:#d8d2c8;font-size:13px;line-height:1.35;text-align:center;padding:9px var(--g)}
+.notice b{color:#fff;font-weight:600}
+
+/* top row */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:6px}
+.top .addr{font-size:14px;color:var(--ink2);text-decoration:none}
+.langs{display:flex;gap:2px}
+.langs button{background:none;border:0;padding:8px 8px;font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--mute);cursor:pointer;border-radius:0}
+.langs button[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+
+/* hero */
+.hero{padding-bottom:28px}
+.mark{margin:0;font-weight:800;font-size:clamp(64px,25vw,178px);line-height:.86;letter-spacing:-.055em;font-variation-settings:"opsz" 96;padding:6px 0 0;margin-left:-.04em;white-space:nowrap}
+.uml{position:relative;display:inline-block}
+.uml i{position:absolute;left:0;top:0;font-style:normal;color:var(--red);clip-path:inset(0 0 calc(100% - .186em) 0)}
+footer .uml i{color:#e8604f}
+.tag{margin:18px 0 0;font-size:19px;line-height:1.4;color:var(--ink2);max-width:30em}
+.tag strong{color:var(--ink);font-weight:600}
+.hero-photo{margin:22px calc(var(--g) * -1) 0;position:relative}
+.hero-photo img{width:100%;aspect-ratio:1/1.02;object-fit:cover;object-position:50% 45%}
+.hero-photo figcaption,.book-photo figcaption{position:absolute;right:10px;bottom:8px;font-size:11px;color:rgba(255,255,255,.85);text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.now{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:16px;font-weight:500}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--mute);flex:none}
+.now.is-open .dot{background:var(--open);box-shadow:0 0 0 4px rgba(79,138,91,.16)}
+.now span.sub{color:var(--mute);font-weight:400}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;background:var(--red);color:#fff;text-decoration:none;font-weight:600;font-size:17px;border:0;border-radius:0;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--red-deep)}
+.btn.wide{flex:1 1 100%}
+.btn .arr{font-weight:400}
+.link{font-weight:600;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+
+/* section scaffolding */
+section{scroll-margin-top:8px}
+.sec{padding:72px 0}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:0 0 12px}
+h2{margin:0;font-weight:750;font-size:clamp(38px,9.6vw,68px);line-height:.98;letter-spacing:-.035em;font-variation-settings:"opsz" 96;text-wrap:balance}
+.lead{margin:16px 0 0;color:var(--ink2);font-size:17px;max-width:34em}
+
+/* menu */
+.menu{background:var(--cloth)}
+.group{margin-top:44px}
+.group-h{display:flex;align-items:baseline;gap:12px;margin:0 0 6px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.group-h h3{margin:0;font-size:30px;line-height:1;font-weight:750;letter-spacing:-.025em}
+.group-h span{font-size:15px;color:var(--mute)}
+.dishes{list-style:none;margin:0;padding:0}
+.dishes li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.dishes li:last-child{border-bottom:0}
+.dishes .n{font-size:18px;line-height:1.3;font-weight:500}
+.dishes .p{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dishes .house .n{font-weight:700}
+.dishes .note{grid-column:1/-1;font-size:14px;color:var(--mute);margin-top:-2px}
+.add{margin:10px 0 0;font-size:15px;color:var(--ink2)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:36px calc(var(--g) * -1) 0}
+.pair figure,.tops-photo{margin:0}
+.pair img{width:100%;aspect-ratio:1/1;object-fit:cover}
+figcaption.dish{padding:10px var(--g) 0 var(--g);font-size:14px;line-height:1.35;color:var(--ink2)}
+.pair figcaption.dish{padding:9px 0 0 var(--g)}
+.pair figure+figure figcaption.dish{padding:9px var(--g) 0 0}
+figcaption.dish b{display:block;color:var(--ink);font-weight:600;font-size:15px}
+figcaption.dish .cr{display:block;font-size:13px;color:var(--mute)}
+.tops-photo{margin:40px calc(var(--g) * -1) 0}
+.tops-photo img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.tops{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 20px}
+.tops li{display:block;padding:11px 0 10px;border-bottom:1px solid var(--line)}
+.tops li:nth-last-child(2){border-bottom:0}
+.tops .n{display:block;font-size:16px;line-height:1.28}
+.tops .p{display:block;margin-top:3px;font-size:15px;font-weight:500;color:var(--ink2)}
+.guestline{margin:22px 0 0;padding:0;font-size:19px;line-height:1.45;font-weight:500;letter-spacing:-.005em;max-width:30em}
+.menu-say{margin-top:18px}
+.guestline cite{display:block;margin-top:8px;font-size:14px;font-style:normal;font-weight:400;color:var(--mute)}
+.menu-foot{margin-top:44px;padding-top:26px;border-top:2px solid var(--ink);display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.menu-foot p{margin:0;flex:1 1 260px;color:var(--ink2);font-size:15px}
+
+/* room */
+.room{background:var(--floor);color:var(--on-floor)}
+.room .kicker{color:var(--on-floor-mute)}
+.room-quote{margin:0;font-size:clamp(27px,7.2vw,46px);line-height:1.18;font-weight:600;letter-spacing:-.02em;font-variation-settings:"opsz" 72;text-wrap:balance}
+.room-quote+cite{display:block;margin-top:16px;font-style:normal;font-size:14px;color:var(--on-floor-mute)}
+.room-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:40px calc(var(--g) * -1) 0}
+.room-photos figure{margin:0}
+.room-photos .big{grid-column:1/-1}
+.room-photos .big img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.room-photos .sm img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.room-photos figcaption{padding:9px var(--g) 0;font-size:13px;color:var(--on-floor-mute);line-height:1.4}
+.room-photos .sm+.sm figcaption{padding-left:0}
+.room-photos .sm:first-of-type figcaption{padding-right:0}
+.room-text{margin:36px 0 0;font-size:18px;color:#d9dee4;max-width:32em}
+.room-text cite{font-style:normal;color:var(--on-floor-mute);font-size:14px;white-space:nowrap}
+
+/* guests */
+.stars{display:flex;align-items:baseline;gap:6px 14px;flex-wrap:wrap;margin-top:18px}
+.stars b{white-space:nowrap;font-size:44px;font-weight:750;letter-spacing:-.03em;line-height:1}
+.stars .src{color:var(--ink2);font-size:16px}
+.quotes{display:grid;gap:34px;margin-top:40px}
+.quotes blockquote{margin:0;padding-top:22px;border-top:2px solid var(--ink)}
+.quotes p{margin:0;font-size:20px;line-height:1.42;font-weight:500;letter-spacing:-.008em}
+.quotes cite{display:block;margin-top:12px;font-style:normal;font-size:14px;color:var(--mute)}
+.tr{font-size:13px;color:var(--mute);margin-top:26px}
+
+/* book */
+.book{background:var(--sand);padding-bottom:0}
+.book-grid{display:grid;gap:0}
+.book-photo{margin:40px calc(var(--g) * -1) 0;position:relative}
+.book-photo img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.book .actions{margin-top:26px}
+.call{font-size:17px}
+.party{background:var(--cloth);padding:26px var(--g) 28px;margin:0 calc(var(--g) * -1)}
+.party h3{margin:0;font-size:28px;line-height:1.05;font-weight:750;letter-spacing:-.025em}
+.party .gq{margin:16px 0 0;font-size:17px;line-height:1.45;color:var(--ink2)}
+.party .gq cite{display:block;margin-top:6px;font-size:13px;font-style:normal;color:var(--mute)}
+form{margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 12px}
+label{display:block;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--ink2)}
+label.full{grid-column:1/-1}
+input,select,textarea{display:block;width:100%;margin-top:6px;min-height:48px;padding:10px 12px;background:#fff;border:1.5px solid #cfc6b8;border-radius:0;font-size:16px;font-weight:400;appearance:none;-webkit-appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 18px) 21px,calc(100% - 13px) 21px;background-size:5px 5px;background-repeat:no-repeat;padding-right:34px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-offset:0;border-color:var(--ink)}
+textarea{min-height:84px;resize:vertical}
+form .btn{grid-column:1/-1;background:var(--ink);margin-top:4px}
+form .btn:hover{background:#000}
+.fine{grid-column:1/-1;margin:0;font-size:13px;color:var(--mute);line-height:1.45}
+
+/* hours + where */
+.hours{list-style:none;margin:28px 0 0;padding:0;max-width:30em}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:18px}
+.hours li:first-child{border-top:2px solid var(--ink)}
+.hours li .t{font-variant-numeric:tabular-nums;font-weight:500;white-space:nowrap}
+.hours li.today{font-weight:700}
+.hours li.today{position:relative}
+.hours li.today .d::after{content:attr(data-today);display:block;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--red-deep);margin-top:2px}
+.where{margin-top:60px}
+.where .addr2{margin:12px 0 0;color:var(--ink2)}
+.contacts{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:0}
+.contacts a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:18px;font-weight:500}
+.contacts li:first-child a{border-top:1px solid var(--line)}
+.contacts a .hint{color:var(--mute);font-weight:400;font-size:15px;white-space:nowrap}
+.contacts a>span:first-child{min-width:0;overflow-wrap:anywhere}
+.contacts a:hover{color:var(--red-deep)}
+
+/* footer */
+footer{background:var(--floor-deep);color:var(--on-floor-mute);font-size:14px;line-height:1.55;padding:48px 0 56px}
+footer .fm{color:var(--on-floor);font-weight:800;font-size:44px;letter-spacing:-.05em;line-height:.86;margin:0 0 22px}
+footer p{margin:0 0 12px;max-width:52em}
+footer b{color:var(--on-floor);font-weight:600}
+footer a{color:var(--on-floor)}
+
+/* ---------- wider screens ---------- */
+@media (min-width:600px){
+  :root{--g:32px}
+  .pair{margin-left:0;margin-right:0}
+  .pair figcaption.dish,.pair figure+figure figcaption.dish{padding:9px 0 0}
+  .tops-photo,.room-photos,.hero-photo{margin-left:0;margin-right:0}
+  .room-photos figcaption,.room-photos .sm+.sm figcaption{padding-left:0}
+  figcaption.dish{padding-left:0}
+  .book{padding-bottom:72px}
+  .book-photo{margin-left:0;margin-right:0}
+  .book-photo img{aspect-ratio:4/3;object-position:50% 70%}
+  .party{margin:0;padding:34px 34px 36px}
+  .quotes{grid-template-columns:1fr 1fr;gap:40px}
+  .tops{gap:0 32px}
+}
+@media (min-width:980px){
+  :root{--g:48px}
+  body{font-size:18px}
+  .sec{padding:128px 0}
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 56px;align-items:stretch;padding-bottom:72px}
+  .hero-text{display:flex;flex-direction:column;padding-top:28px}
+  .hero-text .now{margin-top:auto;padding-top:32px}
+  .mark{font-size:clamp(96px,10.1vw,146px);padding-top:0}
+  .tag{font-size:27px;line-height:1.3;margin-top:34px;letter-spacing:-.01em;max-width:20em}
+  .hero-photo{margin:28px 0 0;grid-column:2;grid-row:1}
+  .hero-photo img{aspect-ratio:1/1.08;max-height:calc(100vh - 140px);min-height:500px}
+  .now{font-size:17px}
+  .actions{margin-top:20px}
+  .btn.wide{flex:0 0 auto}
+  .menu-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:0 72px;align-items:start}
+  .menu-grid .group:first-child{margin-top:56px}
+  .side{margin-top:56px}
+  .pair{margin-top:0}
+  .menu-row2{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0 72px;align-items:start;margin-top:72px}
+  .menu-row2 .group{margin-top:0}
+  .tops-photo{margin-top:0;margin-bottom:28px}
+  .tops-photo img{aspect-ratio:5/4}
+  .menu-row2 .guestline,.menu-say{font-size:23px;line-height:1.36;letter-spacing:-.012em}
+  .tops{gap:0 40px}
+  .room-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:0 80px;align-items:start}
+  .room-photos{margin-top:0}
+  .room-copy{position:sticky;top:48px}
+  .quotes{grid-template-columns:repeat(3,1fr);gap:48px}
+  .book{padding-bottom:128px}
+  .book-grid{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:0 80px;align-items:stretch}
+  .book-main{display:flex;flex-direction:column}
+  .book-photo{flex:1 1 auto;min-height:430px;margin-top:48px}
+  .book-photo img{position:absolute;inset:0;height:100%;aspect-ratio:auto;object-position:50% 37%}
+  .book h2{font-size:58px}
+  .party{padding:52px 48px 52px}
+  .party h3{font-size:34px}
+  .party .gq{font-size:19px;margin-top:20px}
+  .party form{margin-top:28px;gap:18px 14px}
+  .hw-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:0 80px;align-items:start}
+  .where{margin-top:0}
+  footer .fm{font-size:64px}
+}
+@media (min-width:980px) and (max-width:1279px){
+  .hero .btn.wide{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="notice"><b>Nikita:</b> <span data-lang="lv">Dizaina priekšlikums, nav Yolkhaüs oficiālā lapa.</span><span data-lang="en" hidden>Design proposal, not the official Yolkhaüs site.</span></div>
+
+<div class="wrap">
+  <header class="top">
+    <a class="addr" href="#kur">Dzirnavu iela 42, Rīga</a>
+    <div class="langs" role="group" aria-label="Valoda / Language">
+      <button type="button" data-set="lv" aria-pressed="true">LV</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Yolkhaüs">
+    <div class="hero-text">
+      <h1 class="mark" aria-label="Yolkhaüs"><span aria-hidden="true">yolkha<span class="uml">u<i>ü</i></span>s</span></h1>
+      <p class="tag"><span data-lang="lv"><strong>Brokastis visu dienu.</strong> Olas dažādās interpretācijās, kafija vai glāze vīna, fonā — vinila plates.</span><span data-lang="en" hidden><strong>Breakfast, all day.</strong> Eggs every which way, coffee or a glass of wine, vinyl playing in the background.</span></p>
+      <p class="now" id="now"><i class="dot"></i><span id="now-text"><span data-lang="lv">Darba laiks — zemāk</span><span data-lang="en" hidden>Opening hours — below</span></span></p>
+      <div class="actions">
+        <a class="btn wide" href="https://yolkhaus.tablein.com/lv" target="_blank" rel="noopener"><span data-lang="lv">Rezervēt galdiņu</span><span data-lang="en" hidden>Book a table</span> <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="link" href="#edienkarte"><span data-lang="lv">Ēdienkarte ar cenām</span><span data-lang="en" hidden>Menu with prices</span></a>
+        <a class="link" href="tel:+37127020031">27 020 031</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/eggs.jpg" width="1100" height="1306" alt="Ceptas olas uz balta šķīvja ar čili, maurlokiem un rīvētu sieru" data-alt-en="Fried eggs on a white plate with chili, chives and grated cheese" fetchpriority="high">
+      <figcaption>© Danil Gontovnik</figcaption>
+    </figure>
+  </section>
+</div>
+
+<!-- ============ MENU ============ -->
+<section class="menu sec" id="edienkarte">
+  <div class="wrap">
+    <p class="kicker"><span data-lang="lv">Ēdienkarte</span><span data-lang="en" hidden>Menu</span></p>
+    <h2><span data-lang="lv">Olas, piedevas un kaut kas salds</span><span data-lang="en" hidden>Eggs, toppings and something sweet</span></h2>
+    <blockquote class="guestline menu-say">
+      <span data-lang="lv">„Brokastis tiek pasniegtas visas dienas garumā, bez steigas un bez noteikumiem.”</span><span data-lang="en" hidden>“Breakfast is served all day long, with no hurry and no rules.”</span>
+      <cite>LiveRiga<span data-lang="en" hidden>, translated from Latvian</span></cite>
+    </blockquote>
+
+    <div class="menu-grid">
+      <div class="group">
+        <div class="group-h"><h3>Breakfast</h3><span data-lang="lv">brokastis</span></div>
+        <ul class="dishes">
+          <li class="house"><span class="n">Yolkhaüs Omelette</span><span class="p">4.50</span></li>
+          <li><span class="n">Inferno Eggs</span><span class="p">8.90</span></li>
+          <li><span class="n">Turkish Eggs</span><span class="p">8.50</span></li>
+          <li><span class="n">French Omelette</span><span class="p">8.50</span></li>
+          <li><span class="n">French Noir Omelette</span><span class="p">9.90</span></li>
+          <li><span class="n">Scrambled Eggs with Parmesan and Sourdough</span><span class="p">8.80</span></li>
+          <li><span class="n">Rouge Shakshuka</span><span class="p">9.90</span></li>
+          <li><span class="n">Japanese Eggs</span><span class="p">8.50</span></li>
+          <li><span class="n">Potato Waffles With Chili Sour Cream</span><span class="p">8.50</span></li>
+          <li><span class="n">Fried Eggs With Tuna And Ponzu Sauce</span><span class="p">10.80</span></li>
+        </ul>
+      </div>
+      <div class="side">
+        <div class="pair">
+          <figure>
+            <img src="img/waffles.jpg" width="760" height="760" loading="lazy" alt="Kartupeļu vafeles ar čili skābo krējumu tērauda bļodā" data-alt-en="Potato waffles with chili sour cream in a steel bowl">
+            <figcaption class="dish"><b>Potato Waffles With Chili Sour Cream</b>8.50</figcaption>
+          </figure>
+          <figure>
+            <img src="img/donuts.jpg" width="760" height="760" loading="lazy" alt="Biezpiena virtuļi ar grieķu jogurtu, medu un pistācijām" data-alt-en="Cottage cheese donuts with Greek yogurt, honey and pistachios">
+            <figcaption class="dish"><b>Cottage Cheese Donuts With Greek Yogurt And Honey</b>7.50</figcaption>
+          </figure>
+        </div>
+        <div class="group">
+          <div class="group-h"><h3>Sweetie</h3><span data-lang="lv">saldais</span><span data-lang="en" hidden>something sweet</span></div>
+          <ul class="dishes">
+            <li><span class="n">Tahini Oatmeal Porridge</span><span class="p">6.80</span></li>
+            <li><span class="n">Cottage Cheese Donuts With Greek Yogurt And Honey</span><span class="p">7.50</span></li>
+            <li><span class="n">Cottage Cheese Pancakes</span><span class="p">7.50</span></li>
+            <li><span class="n">Crêpe With Passion Fruit And Mascarpone</span><span class="p">7.90</span></li>
+          </ul>
+          <p class="add">+ Homemade ice-cream 2.50<br>+ Berry mix 3.50</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-row2">
+      <div>
+        <figure class="tops-photo">
+          <img src="img/toppings.jpg" width="1100" height="733" loading="lazy" alt="Olas tomātu mērcē, šķēlēs griezts avokado ar sēklām un pastrami uz sarkana galda" data-alt-en="Eggs in tomato sauce, sliced avocado with seeds, and pastrami on a red table">
+          <figcaption class="dish"><span data-lang="lv">Olas ar piedevām — avokado un pastrami</span><span data-lang="en" hidden>Eggs with toppings — avocado and pastrami</span><span class="cr">© Daugvinas Liberis</span></figcaption>
+        </figure>
+        <blockquote class="guestline">
+          <span data-lang="lv">„Patika, ka porcijas nav lielas un var kombinēt dažādas pozīcijas no menu pēc savas gaumes.”</span><span data-lang="en" hidden>“We liked that the portions aren't big and you can combine different things from the menu to your own taste.”</span>
+          <cite>Agnese Z., Google, 5★<span data-lang="en" hidden>, translated from Latvian</span></cite>
+        </blockquote>
+      </div>
+      <div class="group">
+        <div class="group-h"><h3>Toppings</h3><span data-lang="lv">piedevas</span><span data-lang="en" hidden>extras</span></div>
+        <ul class="dishes tops">
+          <li><span class="n">Egg Your Way</span><span class="p">1.50</span></li>
+          <li><span class="n">French Butter Bread</span><span class="p">2.50 / 3.50</span></li>
+          <li><span class="n">Homemade Fig Jam / Chia Blueberry / Berry Mix / Orange</span><span class="p">2.00</span></li>
+          <li><span class="n">Comté Cheese</span><span class="p">3.50</span></li>
+          <li><span class="n">Cottage Cheese</span><span class="p">3.50</span></li>
+          <li><span class="n">Avocado Furikake</span><span class="p">3.80</span></li>
+          <li><span class="n">Parmesan Salad</span><span class="p">4.70</span></li>
+          <li><span class="n">Seasonal Fresh Vegetables</span><span class="p">3.80</span></li>
+          <li><span class="n">Broccolini</span><span class="p">4.50</span></li>
+          <li><span class="n">Asparagus</span><span class="p">4.50</span></li>
+          <li><span class="n">Beef Pastrami</span><span class="p">4.50</span></li>
+          <li><span class="n">Bacon</span><span class="p">3.90</span></li>
+          <li><span class="n">Chicken Pâté With Plum Jam</span><span class="p">3.90</span></li>
+          <li><span class="n">Mushroom And Truffle Pâté</span><span class="p">4.40</span></li>
+          <li><span class="n">Salmon</span><span class="p">5.80</span></li>
+          <li><span class="n">Royal Black Caviar (20g)</span><span class="p">32.50</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu-foot">
+      <p><span data-lang="lv">Brokastu ēdienkarte — tāda, kāda tā ir Yolkhaüs Tablein lapā (2026): angliski, cenas eiro. Par dzērieniem un pārējo jautājiet uz vietas.</span><span data-lang="en" hidden>The breakfast menu as it appears on Yolkhaüs's Tablein page (2026), prices in euros. Ask on the day about drinks and anything else.</span></p>
+      <a class="btn" href="https://yolkhaus.tablein.com/lv" target="_blank" rel="noopener"><span data-lang="lv">Rezervēt galdiņu</span><span data-lang="en" hidden>Book a table</span> <span class="arr" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROOM ============ -->
+<section class="room sec" id="telpa">
+  <div class="wrap room-grid">
+    <div class="room-copy">
+      <p class="kicker"><span data-lang="lv">Telpa</span><span data-lang="en" hidden>The room</span></p>
+      <blockquote class="room-quote"><span data-lang="lv">„Fonā griežas vinila plates, radot sajūtu, ka esi iegriezies drauga virtuvē, kur laiks nedaudz palēninās.”</span><span data-lang="en" hidden>“Vinyl records turn in the background, and it feels as if you've dropped into a friend's kitchen, where time slows down a little.”</span></blockquote>
+      <cite>LiveRiga, „Jaunas vietas pilsētā”<span data-lang="en" hidden>, translated from Latvian</span></cite>
+      <p class="room-text"><span data-lang="lv">Balti galdauti, liela sarkana lodveida lampa, tērauda bļodas un sveces uz bāra letes. Un pie olām — kafija vai vīns, „ko te pasniedz tikpat nepiespiesti kā rīta espresso” <cite>(LiveRiga)</cite>.</span><span data-lang="en" hidden>White tablecloths, a big red globe lamp, steel bowls and candles on the bar. And with the eggs, coffee or wine — “served here as casually as the morning espresso” <cite>(LiveRiga, translated)</cite>.</span></p>
+    </div>
+    <div class="room-photos">
+      <figure class="big">
+        <img src="img/room.jpg" width="1100" height="1375" loading="lazy" alt="Zāle: apaļš galds ar baltu galdautu zem lielas sarkanas lodveida lampas, zilpelēka grīda" data-alt-en="The room: a round table with a white tablecloth under a large red globe lamp, blue-grey floor">
+        <figcaption>© Laura Serma</figcaption>
+      </figure>
+      <figure class="sm">
+        <img src="img/bar.jpg" width="381" height="508" loading="lazy" alt="Bāra lete ar rozēm, vīna glāzēm, svecēm un olu biķerītī" data-alt-en="The bar counter with roses, wine glasses, candles and an egg in an egg cup">
+        <figcaption>© Yevheniia Kyrylenko</figcaption>
+      </figure>
+      <figure class="sm">
+        <img src="img/latte.jpg" width="700" height="933" loading="lazy" alt="Latte viļņotā baltā tasē ar sveci fonā" data-alt-en="A latte in a wavy white cup with a candle behind it">
+        <figcaption>© Ivan Bezuglov</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUESTS ============ -->
+<section class="sec" id="viesi">
+  <div class="wrap">
+    <p class="kicker"><span data-lang="lv">Viesi</span><span data-lang="en" hidden>Guests</span></p>
+    <h2><span data-lang="lv">Ko saka tie, kas bijuši</span><span data-lang="en" hidden>From people who've been</span></h2>
+    <div class="stars"><b><span data-lang="lv">4,5 ★</span><span data-lang="en" hidden>4.5 ★</span></b><span class="src"><span data-lang="lv">Google kartēs, 186 atsauksmes (09.2026)</span><span data-lang="en" hidden>on Google Maps, 186 reviews (Sept 2026)</span></span></div>
+    <div class="quotes">
+      <blockquote>
+        <p data-lang="lv">„Pasūtījām turku olas, kartupeļu vafeles, lasi, maizi, mājas greipfrūtu limonādi (izcila!) un svaigi spiestu apelsīnu sulu.”</p>
+        <p data-lang="en" hidden>“We ordered Turkish eggs, potato waffles, salmon, bread, homemade grapefruit lemonade (excellent!) and freshly squeezed orange juice.”</p>
+        <cite>Agnese Z., Google, 5★<span data-lang="en" hidden>, translated from Latvian</span></cite>
+      </blockquote>
+      <blockquote>
+        <p data-lang="lv">„Viegls ēdiens, izbaudīta plaša garšu gamma. Citādāka ēdienkarte ar atsaucēm uz ceļojumos baudītajiem citu zemju virtuves raksturlielumiem.”</p>
+        <p data-lang="en" hidden>“Light food, and a wide range of flavours. A different kind of menu, with nods to other countries' cooking tasted while travelling.”</p>
+        <cite>Liva L., Google, 5★<span data-lang="en" hidden>, translated from Latvian</span></cite>
+      </blockquote>
+      <blockquote>
+        <p data-lang="lv">„Ļoti mīlīga vietiņa, piepildīta ar ļaudīm.”</p>
+        <p data-lang="en" hidden>“A very sweet little place, full of people.”</p>
+        <cite>Sniedze S., Google, 5★<span data-lang="en" hidden>, translated from Latvian</span></cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOK ============ -->
+<section class="book sec" id="rezervet">
+  <div class="wrap book-grid">
+    <div class="book-main">
+      <p class="kicker"><span data-lang="lv">Rezervācija</span><span data-lang="en" hidden>Bookings</span></p>
+      <h2><span data-lang="lv">Rezervējiet galdiņu</span><span data-lang="en" hidden>Book a table</span></h2>
+      <p class="lead"><span data-lang="lv">Yolkhaüs galdiņus rezervē Tablein sistēmā — tur ir arī ēdienkarte. Ja ērtāk, zvaniet.</span><span data-lang="en" hidden>Yolkhaüs takes table bookings through Tablein, where the menu is too. Or simply call.</span></p>
+      <div class="actions">
+        <a class="btn" href="https://yolkhaus.tablein.com/lv" target="_blank" rel="noopener"><span data-lang="lv">Rezervēt galdiņu</span><span data-lang="en" hidden>Book a table</span> <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="link call" href="tel:+37127020031">+371 27 020 031</a>
+      </div>
+      <figure class="book-photo">
+        <img src="img/table.jpg" width="1170" height="1170" loading="lazy" alt="Galds ar baltu galdautu: omlete ar trifelēm, kartupeļu vafeles, maize tērauda bļodā un olas tomātu mērcē" data-alt-en="A table with a white tablecloth: an omelette with truffle, potato waffles, bread in a steel bowl and eggs in tomato sauce">
+        <figcaption>© D.L</figcaption>
+      </figure>
+    </div>
+
+    <div class="party">
+      <h3><span data-lang="lv">Svinības</span><span data-lang="en" hidden>A celebration</span></h3>
+      <blockquote class="gq">
+        <span data-lang="lv">„Īpašā restorāna atmosfēra radīja patiesi svinīgu un vienlaikus ļoti mājīgu sajūtu — tieši to, ko vēlējos šai dienai.”</span><span data-lang="en" hidden>“The restaurant’s unique atmosphere created a truly special experience — both elegant and cozy at the same time, exactly what I was hoping for.”</span>
+        <cite><span data-lang="lv">Gundega B. par savām dzimšanas dienas svinībām, Google, 5★</span><span data-lang="en" hidden>Gundega B. on her birthday party, Google, 5★</span></cite>
+      </blockquote>
+      <form id="party" novalidate>
+        <label class="full"><span data-lang="lv">Kas svinams</span><span data-lang="en" hidden>The occasion</span>
+          <select id="f-what">
+            <option value="bday" selected data-lv="Dzimšanas diena" data-en="Birthday">Dzimšanas diena</option>
+            <option value="team" data-lv="Kolēģu brokastis" data-en="Team breakfast">Kolēģu brokastis</option>
+            <option value="other" data-lv="Cits iemesls" data-en="Something else">Cits iemesls</option>
+          </select>
+        </label>
+        <label><span data-lang="lv">Datums</span><span data-lang="en" hidden>Date</span>
+          <input id="f-date" type="date">
+        </label>
+        <label><span data-lang="lv">Viesu skaits</span><span data-lang="en" hidden>Guests</span>
+          <input id="f-n" type="number" inputmode="numeric" min="2" max="80" value="8">
+        </label>
+        <label class="full"><span data-lang="lv">Vārds</span><span data-lang="en" hidden>Your name</span>
+          <input id="f-name" type="text" autocomplete="name">
+        </label>
+        <button class="btn" type="submit"><span data-lang="lv">Uzrakstīt e-pastu</span><span data-lang="en" hidden>Write the e-mail</span></button>
+        <p class="fine"><span data-lang="lv">Atvērsies jūsu e-pasta lietotne ar gatavu vēstuli adresei yolkhausriga@gmail.com — pārbaudiet un nosūtiet paši. Šī lapa neko neglabā un nesūta.</span><span data-lang="en" hidden>Your own mail app opens with a ready message to yolkhausriga@gmail.com — check it and send it yourself. This page stores and sends nothing.</span></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOURS + WHERE ============ -->
+<section class="sec" id="kur">
+  <div class="wrap hw-grid">
+    <div>
+      <p class="kicker"><span data-lang="lv">Darba laiks</span><span data-lang="en" hidden>Opening hours</span></p>
+      <h2><span data-lang="lv">Atvērts katru dienu</span><span data-lang="en" hidden>Open every day</span></h2>
+      <ul class="hours" id="hours">
+        <li data-days="1,2,3,4"><span class="d"><span data-lang="lv">Pirmdiena – ceturtdiena</span><span data-lang="en" hidden>Monday – Thursday</span></span><span class="t">8:00 – 16:00</span></li>
+        <li data-days="5"><span class="d"><span data-lang="lv">Piektdiena</span><span data-lang="en" hidden>Friday</span></span><span class="t">8:00 – 23:00</span></li>
+        <li data-days="6"><span class="d"><span data-lang="lv">Sestdiena</span><span data-lang="en" hidden>Saturday</span></span><span class="t">9:00 – 23:00</span></li>
+        <li data-days="0"><span class="d"><span data-lang="lv">Svētdiena</span><span data-lang="en" hidden>Sunday</span></span><span class="t">10:00 – 20:00</span></li>
+      </ul>
+    </div>
+    <div class="where">
+      <p class="kicker"><span data-lang="lv">Kur</span><span data-lang="en" hidden>Where</span></p>
+      <h2>Dzirnavu iela 42</h2>
+      <p class="addr2"><span data-lang="lv">Rīgas centrs, LV-1010</span><span data-lang="en" hidden>Central Rīga, LV-1010</span></p>
+      <ul class="contacts">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Yolkha%C3%BCs%2C%20Dzirnavu%20iela%2042%2C%20R%C4%ABga&amp;query_place_id=ChIJwW7fFADP7kYReQyI0N1Rt9k" target="_blank" rel="noopener"><span><span data-lang="lv">Atvērt kartē</span><span data-lang="en" hidden>Open in Maps</span></span><span class="hint">Google ↗</span></a></li>
+        <li><a href="tel:+37127020031"><span>+371 27 020 031</span><span class="hint"><span data-lang="lv">zvanīt</span><span data-lang="en" hidden>call</span></span></a></li>
+        <li><a href="mailto:yolkhausriga@gmail.com"><span>yolkhausriga@gmail.com</span><span class="hint"><span data-lang="lv">e-pasts</span><span data-lang="en" hidden>e-mail</span></span></a></li>
+        <li><a href="https://yolkhaus.tablein.com/lv" target="_blank" rel="noopener"><span><span data-lang="lv">Rezervācija</span><span data-lang="en" hidden>Bookings</span></span><span class="hint">Tablein ↗</span></a></li>
+        <li><a href="https://www.instagram.com/yolkhaus/" target="_blank" rel="noopener"><span>@yolkhaus</span><span class="hint">Instagram ↗</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="fm" aria-label="Yolkhaüs"><span aria-hidden="true">yolkha<span class="uml">u<i>ü</i></span>s</span></p>
+    <p><span data-lang="lv"><b>Dizaina priekšlikums — Nikita</b> (<a href="mailto:ngoloveckis@gmail.com">ngoloveckis@gmail.com</a>). Šī nav Yolkhaüs oficiālā lapa; tā ir skice, kas tapusi, lai to parādītu restorānam.</span><span data-lang="en" hidden><b>A design proposal by Nikita</b> (<a href="mailto:ngoloveckis@gmail.com">ngoloveckis@gmail.com</a>). This is not the official Yolkhaüs website; it is a sketch made to show the restaurant.</span></p>
+    <p><span data-lang="lv">Fotogrāfijas — viesi Google kartēs: Danil Gontovnik (olas, vafeles, virtuļi), Daugvinas Liberis (piedevas), Laura Serma (zāle), Yevheniia Kyrylenko (bārs), Ivan Bezuglov (kafija), D.L (galds ar omleti).</span><span data-lang="en" hidden>Photographs by guests on Google Maps: Danil Gontovnik (eggs, waffles, donuts), Daugvinas Liberis (toppings), Laura Serma (the room), Yevheniia Kyrylenko (the bar), Ivan Bezuglov (coffee), D.L (the omelette table).</span></p>
+    <p><span data-lang="lv">Fakti: Yolkhaüs Tablein lapa (ēdienkarte, darba laiks, e-pasts), LiveRiga „Jaunas vietas pilsētā”, Google kartes (adrese, tālrunis, atsauksmes un vērtējums 19.09.2026). Svētdienas darba laiks avotos atšķiras: Tablein lapā norādīts no 10:00, Google kartēs — no 9:00; šeit rādīts Tablein laiks.</span><span data-lang="en" hidden>Facts: Yolkhaüs's Tablein page (menu, hours, e-mail), LiveRiga's „Jaunas vietas pilsētā” (“New places in the city”), Google Maps (address, phone, reviews and rating as of 19 Sept 2026). The sources disagree on Sunday: Tablein says from 10:00, Google Maps from 9:00; this page shows Tablein's hours.</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var LANGS=['lv','en'], KEY='yolkhaus-lang', cur='lv';
+  var TITLES={lv:'Yolkhaüs — brokastis visu dienu, Dzirnavu iela 42, Rīga',en:'Yolkhaüs — breakfast all day, Dzirnavu iela 42, Rīga'};
+  function setLang(l){
+    if(LANGS.indexOf(l)<0) l='lv'; cur=l;
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-lang]').forEach(function(el){ el.hidden = el.getAttribute('data-lang')!==l; });
+    document.querySelectorAll('.langs button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.set===l ? 'true':'false'); });
+    document.querySelectorAll('option[data-'+l+']').forEach(function(o){ o.textContent=o.getAttribute('data-'+l); });
+    document.querySelectorAll('img[data-alt-en]').forEach(function(i){
+      if(!i.hasAttribute('data-alt-lv')) i.setAttribute('data-alt-lv', i.alt);
+      i.alt=i.getAttribute('data-alt-'+l)||i.getAttribute('data-alt-lv');
+    });
+    document.title=TITLES[l];
+    try{ localStorage.setItem(KEY,l); }catch(e){}
+    status();
+  }
+  document.querySelectorAll('.langs button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.set); }); });
+
+  /* opening hours, Rīga time — as on Tablein */
+  var H={0:[10,20],1:[8,16],2:[8,16],3:[8,16],4:[8,16],5:[8,23],6:[9,23]};
+  function rigaNow(){
+    try{
+      var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Riga',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+      var o={}; p.forEach(function(x){o[x.type]=x.value;});
+      var d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday);
+      return {d:d, m:(+o.hour%24)*60+(+o.minute)};
+    }catch(e){ var n=new Date(); return {d:n.getDay(), m:n.getHours()*60+n.getMinutes()}; }
+  }
+  function status(){
+    var t=rigaNow(), h=H[t.d], box=document.getElementById('now'), txt=document.getElementById('now-text');
+    var lv=cur==='lv', msg, open=false;
+    if(t.m>=h[0]*60 && t.m<h[1]*60){ open=true; msg= lv ? 'Šobrīd atvērts <span class="sub">līdz '+h[1]+':00</span>' : 'Open now <span class="sub">until '+h[1]+':00</span>'; }
+    else if(t.m<h[0]*60){ msg= lv ? 'Šobrīd slēgts, <span class="sub">šodien atveram plkst. '+h[0]+':00</span>' : 'Closed now, <span class="sub">opens today at '+h[0]+':00</span>'; }
+    else { var nx=H[(t.d+1)%7]; msg= lv ? 'Šobrīd slēgts, <span class="sub">rīt atveram plkst. '+nx[0]+':00</span>' : 'Closed now, <span class="sub">opens tomorrow at '+nx[0]+':00</span>'; }
+    txt.innerHTML=msg; box.classList.toggle('is-open',open);
+    document.querySelectorAll('#hours li').forEach(function(li){
+      var on=li.dataset.days.split(',').indexOf(String(t.d))>=0;
+      li.classList.toggle('today',on);
+      li.querySelector('.d').setAttribute('data-today', lv ? 'šodien' : 'today');
+    });
+  }
+
+  /* celebration e-mail */
+  var f=document.getElementById('party');
+  var d=document.getElementById('f-date'); try{ d.min=new Date().toISOString().slice(0,10); }catch(e){}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var w=document.getElementById('f-what'), what=w.options[w.selectedIndex].textContent;
+    var has=!!d.value, date=has ? d.value.split('-').reverse().join('.') : (cur==='lv'?'vēl nav zināms':'to be agreed');
+    var sdate=has ? date : (cur==='lv'?'datums vēl nav zināms':'date to be agreed');
+    var other=w.value==='other', low=what.toLowerCase();
+    var n=document.getElementById('f-n').value||'?', name=document.getElementById('f-name').value.trim();
+    var s,b;
+    if(cur==='lv'){
+      s='Svinības Yolkhaüs — '+(other?'':low+', ')+sdate;
+      b='Labdien!\n\nVēlos pie jums rīkot svinības.\nIemesls: '+(other?'pastāstīšu atsevišķi':low)+'\nDatums: '+date+'\nViesu skaits: '+n+'\n\nVai tas ir iespējams, un ko jūs ieteiktu?\n\n'+(name||'');
+    }else{
+      s='A celebration at Yolkhaüs — '+(other?'':low+', ')+sdate;
+      b='Hello,\n\nI would like to hold a celebration at Yolkhaüs.\nOccasion: '+(other?'I will explain separately':low)+'\nDate: '+date+'\nGuests: '+n+'\n\nIs that possible, and what would you suggest?\n\n'+(name||'');
+    }
+    location.href='mailto:yolkhausriga@gmail.com?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b);
+  });
+
+  var q=null; try{ q=new URLSearchParams(location.search).get('lang'); }catch(e){}
+  var saved=null; try{ saved=localStorage.getItem(KEY); }catch(e){}
+  setLang(q && LANGS.indexOf(q)>=0 ? q : (saved||'lv'));
+  setInterval(status,60000);
+})();
+</script>
+</body>
+</html>
